@@ -1,9 +1,16 @@
 using System;
+using System.Windows.Forms;
 
-class Program
+namespace MindfulnessApp
 {
-    static void Main(string[] args)
+    internal static class Program
     {
-        Console.WriteLine("Hello World! This is the Mindfulness Project.");
+        [STAThread]
+        static void Main()
+        {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new LoginForm());
+        }
     }
 }
